@@ -8,7 +8,7 @@ race = st.selectbox("Select Race", ['Black', 'White', 'Hispanic', 'Other and Unk
 offense_group = st.selectbox("Select Offense Group", ['Drug', 'Violent', 'Sexual', 'Property', 'Public Order', 'Other'])
 
 prediction = predict_sentence_length(age, race, offense_group,
-                                     model_path='models/sentence_model.pkl',
-                                     scaler_path='models/age_scaler.pkl')
+                                     model_path='/mount/src/texas-sentencing-app-final/sentence_predictor_app/models/sentence_model.pkl',
+                                     scaler_path='/mount/src/texas-sentencing-app-final/sentence_predictor_app/models/age_scaler.pkl')
 
 st.subheader(f"🧾 Estimated Sentence Length: **{prediction:.2f} years**")
